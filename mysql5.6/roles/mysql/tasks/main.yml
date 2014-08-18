@@ -1,10 +1,10 @@
 ---
 - name: download mysql rpms
-  get_url: url={{ mysql_url }}/$item dest={{ rpm_download_dir }}/$item
+  get_url: url={{ mysql_url }}/{{ item }} dest={{ rpm_download_dir }}/{{ item }}
   with_items: mysql_rpms
 
 - name: install mysql rpms
-  yum: name=$item state=installed
+  yum: name={{ item }} state=installed
   with_items:
     - "{{ rpm_download_dir }}/{{ mysql_rpms[0] }}"
     - "{{ rpm_download_dir }}/{{ mysql_rpms[1] }}"
@@ -44,7 +44,7 @@
   template: src=.my.cnf.j2 dest=/root/.my.cnf owner=root mode=0600
 
 - name: update mysql root password for all root accounts
-  mysql_user: name=root host=$item
+  mysql_user: name=root host={{ item }}
   with_items:
     - 127.0.0.1
     - ::1
