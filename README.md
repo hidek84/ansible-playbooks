@@ -1,19 +1,22 @@
-# Ansible Playbooks
+# Useful Ansible Playbooks
 
-My ansible playbooks.
+This playbooks are forked by akishin's. Now updating $item to {{ item }} and the version.
 
-* Expects CentOS 6.4 x86_64 hosts
-* Requires Ansible 1.2.2 or newer
+* Confirmed playbooks
+  * mysql5.6
 
-自作の Ansible の Playbook 置き場です。
-以下の環境で確認しています。
+* Requirements
+  * CentOS 6.4 x86_64
+  * Ansible 1.7 or newer
 
-* CentOS 6.4 x86_64
-* Ansible 1.2.2
+akishin 氏の playbooks から fork した playbooks です。現在、バージョンや $item 周りをアップデートしています。
 
-## Install
+* 動作確認済み playbooks
+  * mysql5.6
 
-    git clone git://github.com/akishin/ansible-playbooks.git
+* 動作環境
+  * CentOS 6.4 x86_64
+  * Ansible 1.7 or newer
 
 ## License
 
