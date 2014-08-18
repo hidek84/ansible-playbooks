@@ -1,6 +1,6 @@
 ---
 mysql_url: http://ftp.jaist.ac.jp/pub/mysql/Downloads/MySQL-5.6
-mysql_ver: "5.6.12-2"
+mysql_ver: "5.6.19-1"
 mysql_rpms:
   - MySQL-client-{{ mysql_ver }}.el6.x86_64.rpm
   - MySQL-shared-compat-{{ mysql_ver }}.el6.x86_64.rpm
